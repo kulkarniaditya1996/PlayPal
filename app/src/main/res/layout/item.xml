@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="25dp"
+    android:background="@drawable/edit"
+    app:cardBackgroundColor="@color/secondary"
+    android:layout_margin="10dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView android:layout_marginTop="10dp" android:layout_gravity="center_horizontal" android:layout_width="100dp" android:layout_height="90dp" android:src="@drawable/ic_baseline_account_circle_24"
+                android:id="@+id/image"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fullName"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Chris"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="20sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/sports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:text="SPORTS"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:textSize="30dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/ic_calendar"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20dp"
+                    />
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DATE"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_clock"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20dp"
+                    />
+                <TextView
+                    android:id="@+id/time1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TIME"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Count"
+                    android:layout_gravity="top"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/primary"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20dp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="First Name :"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="26sp"-->
+    <!--                android:textStyle="bold"/>-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvfirstName"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="8dp"-->
+    <!--                android:text="Arya"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="20sp" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Last Name :"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="26sp"-->
+    <!--                android:textStyle="bold"/>-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvlastName"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="8dp"-->
+    <!--                android:text="Stark"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="20sp" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        &lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_gravity="center_vertical"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:text="Age :"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:textColor="@color/black"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:textSize="26sp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:textStyle="bold"/>&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:id="@+id/tvage"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_marginLeft="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:text="18"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:textColor="@color/black"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:textSize="20sp" />&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+
+
+
+    <!--    </LinearLayout>-->
+</androidx.cardview.widget.CardView>

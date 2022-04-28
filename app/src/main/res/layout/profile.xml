@@ -1,0 +1,114 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:id="@+id/drawer_layoutP" android:layout_height="match_parent" android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_200"
+                app:titleTextColor="@color/primary"
+                app:title="@string/Profile"
+                android:id="@+id/topAppBarP"
+                app:navigationIcon="@drawable/ic_round_menu_24"
+
+                android:layout_gravity="start"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="300dp">
+            <LinearLayout android:background="@drawable/gradientbackground" android:layout_width="match_parent" android:layout_height="210dp" android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_marginTop="10dp" android:layout_gravity="center_horizontal" android:layout_width="150dp" android:layout_height="150dp" android:src="@drawable/ic_baseline_account_circle_24"
+                    android:id="@+id/image"/>
+                <TextView android:layout_marginTop="10dp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bruce Wayne" android:textColor="#fff" android:textStyle="bold" android:textSize="21sp"
+                    android:id="@+id/name"/>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView android:layout_width="150dp" app:cardCornerRadius="6dp" android:layout_height="100dp" android:layout_centerHorizontal="true" android:layout_marginTop="200dp" android:layout_marginBottom="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"  android:gravity="center" android:orientation="vertical" android:weightSum="2">
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Activities"
+
+                            android:textSize="20sp"
+                            android:fontFamily="@font/roboto_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textStyle="bold" android:textSize="20sp" android:paddingTop="10dp" android:textColor="@color/purple_200"
+                            android:id="@+id/activity_count"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:id="@+id/change"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_input"
+                android:textColor="@color/primary"
+                android:text="Upload Picture"/>
+            <Button
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:id="@+id/camera"
+                android:background="@drawable/custom_input"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="10dp"
+                android:text="Take Picture"/>
+
+            <Button
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:id="@+id/logout"
+                android:background="@drawable/custom_input"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="10dp"
+                android:onClick="Logout"
+                android:text="Logout"/>
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="360dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="center" android:layout_marginTop="45dp">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="25dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_email_svgrepo_com"/>
+                <TextView android:textStyle="bold" android:layout_gravity="center_vertical" android:onClick="showDialogContact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingLeft="20dp" android:text="Contact Us"/>
+            </LinearLayout>
+            <LinearLayout android:layout_marginTop="25dp" android:orientation="horizontal" android:paddingLeft="25dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_about_us_svgrepo_com"/>
+                <TextView android:textStyle="bold" android:onClick="showDialogAbout" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingLeft="20dp" android:text="About"/>
+            </LinearLayout>
+            <LinearLayout android:layout_marginTop="25dp" android:orientation="horizontal" android:paddingLeft="25dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_lock_privacy_svgrepo_com"/>
+                <TextView android:textStyle="bold" android:onClick="showDialogPrivacy" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingLeft="20dp" android:text="Privacy Terms"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--     <Button -->
+        <!--         android:textColor="#fff" -->
+        <!--         android:background="@drawable/buttonstyleithgradient" -->
+        <!--         android:layout_marginTop="35dp" -->
+        <!--         android:layout_gravity="center_horizontal" -->
+        <!--         android:layout_width="wrap_content" -->
+        <!--         android:layout_height="wrap_content" -->
+        <!--         android:text="Follow Me"/> -->
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navigation_viewP"
+        android:background="@drawable/background"
+        app:menu="@menu/nav_drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

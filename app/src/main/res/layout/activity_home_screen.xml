@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/topAppBar"
+                app:title="@string/home"
+                app:titleTextColor="@color/primary"
+                android:background="@color/purple_200"
+                app:navigationIcon="@drawable/ic_round_menu_24"
+                android:layout_gravity="start"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <!--    <item-->
+        <!--        android:id="@+id/item2"-->
+        <!--        android:title="Item 2"-->
+        <!--        app:showAsAction="never" />-->
+
+        <!--    <item-->
+        <!--        android:id="@+id/item3"-->
+        <!--        android:title="Item 3"-->
+        <!--        app:showAsAction="never">-->
+
+        <!--        <menu>-->
+
+        <!--            <item-->
+        <!--                android:id="@+id/subitem1"-->
+        <!--                android:title="Sub Item 1" />-->
+
+        <!--            <item-->
+        <!--                android:id="@+id/subitem2"-->
+        <!--                android:title="Sub Item 2" />-->
+
+        <!--        </menu>-->
+
+        <!--    </item>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/background"
+        android:id="@+id/navigation_view"
+        app:menu="@menu/nav_drawer_menu"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

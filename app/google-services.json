@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "210264321169",
+    "firebase_url": "https://playpal-11f6b-default-rtdb.firebaseio.com",
+    "project_id": "playpal-11f6b",
+    "storage_bucket": "playpal-11f6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210264321169:android:fcebdf865b93e22148e330",
+        "android_client_info": {
+          "package_name": "com.example.playpal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210264321169-lnbllh3g727t39gm1shenrdjedlehtqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgzngqHnh4lL1QAQqU5jf5NSTIHp7gplQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210264321169-lnbllh3g727t39gm1shenrdjedlehtqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <Button
+        android:id="@+id/backGroupC"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_round_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/chat"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="CHAT"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/my_scroll_view"/>
+
+    <ScrollView
+        android:id="@+id/my_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backGroupC"
+        android:layout_above="@id/myLinearLayout">
+<!--        android:layout_above="@+id/myLinearLayout"-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+
+            <!--    <item-->
+            <!--        android:id="@+id/item2"-->
+            <!--        android:title="Item 2"-->
+            <!--        app:showAsAction="never" />-->
+
+            <!--    <item-->
+            <!--        android:id="@+id/item3"-->
+            <!--        android:title="Item 3"-->
+            <!--        app:showAsAction="never">-->
+
+            <!--        <menu>-->
+
+            <!--            <item-->
+            <!--                android:id="@+id/subitem1"-->
+            <!--                android:title="Sub Item 1" />-->
+
+            <!--            <item-->
+            <!--                android:id="@+id/subitem2"-->
+            <!--                android:title="Sub Item 2" />-->
+
+            <!--        </menu>-->
+
+            <!--    </item>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toTopOf="@id/topAppBar"
+                app:layout_constraintVertical_bias="1.0"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/myLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/input_group_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="write your message here..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="5"
+            android:layout_weight="1"
+            android:padding="17dp"
+            android:background="@color/design_default_color_background"
+            />
+
+        <ImageButton
+            android:id="@+id/send_message_button"
+            android:layout_width="60dp"
+            android:background="@color/design_default_color_background"
+            android:scaleType="fitCenter"
+            android:layout_height="50dp"
+            android:src="@drawable/send_message"
+            android:requiresFadingEdge="horizontal"
+            android:fadingEdge="vertical"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
